@@ -1,3 +1,7 @@
+img {
+  pointer-events: none;
+  user-select: none;
+}
 #playerController {
 	position: fixed;
 	bottom: 5vh;
