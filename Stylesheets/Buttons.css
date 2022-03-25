@@ -1,5 +1,5 @@
 img {
-  user-select: none;
+  pointer-events: none;
 }
 #playerController {
 	position: fixed;
