@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Space Survival</title>
+		
+		<link rel="stylesheet" href="./Stylesheets/Buttons.css">
+		<link rel="stylesheet" href="./Stylesheets/UserInterface.css">
+		
+		<script src="./Scripts/Buttons.js"             type="text/javascript"></script>
+		<script src="./Scripts/EmptyObject.js"         type="text/javascript"></script>
+		<script src="./Scripts/SpawnManager.js"        type="text/javascript"></script>
+		<script src="./Scripts/SpaceshipController.js" type="text/javascript"></script>
+		<script src="./Scripts/Gameplay.js"            type="text/javascript"></script>
+	</head>
+	<body>
+		
+		<canvas id="canvas">
+			<h3>This game doesn't support your Browser.</h3>
+		</canvas>
+
+		<!-- Required sprites and elements -->
+		<div class="Disable">
+			<img class="obstacles" src="./Sprites/Obstacles/S1.png">
+			<img class="obstacles" src="./Sprites/Obstacles/S2.png">
+			<img class="obstacles" src="./Sprites/Obstacles/S3.png">
+			<img class="obstacles" src="./Sprites/Obstacles/E1.png">
+			<img class="obstacles" src="./Sprites/Obstacles/E2.png">
+			<img class="obstacles" src="./Sprites/Obstacles/M1.png">
+			<img class="obstacles" src="./Sprites/Obstacles/M2.png">
+
+			<img id="lifeLine" src="./Sprites/Lifeline.png">
+			<img id="laser"    src="./Sprites/Mesile.png">
+		</div>
+
+		<div id="homeScreen">
+			<h1>Space Survival</h1>
+			<img id="spaceship" src="./Sprites/Spaceship/Model-1.png" width="100px" height="100px">
+
+			<div class="btn">
+				<img id="start"  onclick="StartBtnClick();"  src="./Sprites/onscreenControls/Start.png">
+				<img id="select" onclick="SelectBtnClick();" src="./Sprites/onscreenControls/Select.png">
+			</div>
+
+			<p>Devloped By Ankit <a href="#">Soure Code Link</a></p>
+			
+		</div>	
+
+		<div id="toolBar">
+			<img id="pause"     class="Btn2" onclick="PauseBtnClick();" src="./Sprites/onscreenControls/Pause.png">
+			<img id="volumeOn"  class="Btn2" onclick="VolumeOn();"      src="./Sprites/onscreenControls/Volume-On.png">
+			<img id="volumeOff" class="Btn2" onclick="VolumeOff();"     src="./Sprites/onscreenControls/Volume-Off.png">		
+			<img                class="Btn2" onclick="MenuBtnClick();"  src="./Sprites/onscreenControls/Menu.png">
+		</div>
+		
+		<div id="spaceshipSelector">
+			<h1>Spaceship Models</h1>
+			<div id="spaceship-models">
+				<img onclick="ChooseSpaceship('./Sprites/Spaceship/Model-1.png');" src="./Sprites/Spaceship/Model-1.png">
+				<img onclick="ChooseSpaceship('./Sprites/Spaceship/Model-2.png');" src="./Sprites/Spaceship/Model-2.png">
+			</div>
+			<img id="cancel" onclick="CancelBtnClick();" src="./Sprites/onscreenControls/Cancel.png">
+		</div>	
+
+		<div id="playerController">
+			<div id="movementController">
+				<img id="leftBtn" class="Btn1" ontouchstart="LeftBtnPress();" ontouchend="LeftBtnRelese();" src="./Sprites/onscreenControls/Left.png">
+				<img id="rightBtn" class="Btn1" ontouchstart="RightBtnPress();" ontouchend="RightBtnRelese();" src="./Sprites/onscreenControls/Right.png">
+			</div>
+			<img id="shooter" class="Btn1" ontouchstart="ShooterPress();" ontouchend="ShooterRelese();" src="./Sprites/onscreenControls/Shooter1.png" alt="Some Required files are missing">
+		</div>
+	</body>
+</html>
+
