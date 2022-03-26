@@ -19,9 +19,11 @@
 	height: 50px;
 }
 #leftBtn {
+background-color: white;
 background-image: url("./Sprites/onscreenControls/Left.png");
 }
 #rightBtn {
+background-color: white;
 background-image: url("./Sprites/onscreenControls/Right.png");   
 }
 #homeScreen {
