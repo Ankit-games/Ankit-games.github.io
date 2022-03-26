@@ -7,6 +7,10 @@
 }
 #movementController {
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+	width: 150px;
+	justify-content: space-around;
 }
 #shooter {
 	transform: Rotate(20deg);
@@ -19,12 +23,19 @@
 	height: 50px;
 }
 #leftBtn {
-background-color: white;
-background-image: url("./Sprites/onscreenControls/Left.png");
+	background-image: url("../Sprites/onscreenControls/Left.png");
+	background-size: cover; 
+	background-position: center;
 }
 #rightBtn {
-background-color: white;
-background-image: url("./Sprites/onscreenControls/Right.png");   
+	background-image: url("../Sprites/onscreenControls/Right.png");
+	 background-size: cover; 
+	 background-position: center;
+}
+#shooter {
+	background-image: url("../Sprites/onscreenControls/Shooter1.png");
+	background-size: cover; 
+	background-position: center;
 }
 #homeScreen {
 	position: fixed;
