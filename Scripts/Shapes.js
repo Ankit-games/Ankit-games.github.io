@@ -19,7 +19,8 @@ class Triangle extends Shape
 	Render(context)
 	{
 		context.beginPath();
-		context.fillStyle = this.color;
+		// context.fillStyle = this.color;
+                context.fillStroke = this.color;
 		// vertice A
 		context.moveTo(this.x, this.y);
 		// vertice B
@@ -28,7 +29,8 @@ class Triangle extends Shape
 		context.lineTo(this.x-this.scale, this.y+1.7320581*this.scale); 
 		// vertice A
 		context.lineTo(this.x, this.y);
-		context.fill();
+		// context.fill();
+                context.stroke();
 		context.closePath();
 	}
 };
@@ -44,9 +46,11 @@ class Circle extends Shape
 	Render(context)
 	{
 		context.beginPath();
-		context.fillStyle = this.color;
+		// context.fillStyle = this.color;
+                context.fillStroke = this.color;
 		context.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
-		context.fill();
+		// context.fill();
+                context.stroke();
 		context.closePath();
 	}
 }
@@ -63,8 +67,11 @@ class Rectangle extends Shape
 	Render(context)
 	{
 		context.beginPath();
-		context.fillStyle = this.color;
-		context.fillRect(this.x, this.y, this.width, this.height);
+		// context.fillStyle = this.color;
+                context.fillStroke = this.color;
+		// context.fillRect(this.x, this.y, this.width, this.height);
+                context.rect(this.x, this.y, this.width, this.height);
+                context.stroke();
 		context.closePath();
 	}
 }
