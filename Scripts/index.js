@@ -136,7 +136,10 @@ function ClearScreen()
 	total.Triangle = 0;
 	total.Rectangle = 0;
 	
-	shapes.length = 0;
+	while(shapes.length) {
+            shapes.pop();
+        }
+
 	UpdateMoniter();	
 }
 
